@@ -1,0 +1,47 @@
+@font-face {
+  font-family: Inter;
+  src: url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+// login styling
+
+.HeadTextLogReg {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto 0 auto;
+  h1 {
+    margin: 0;
+    font-weight: 500;
+  }
+  .underline {
+    background-color: #C23DE3;
+    height: 7.5px;
+    width: 120%;
+    border-radius: 180px;
+  }
+}
+.CreateBlogLink {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  li {
+    color: #C23DE3;
+  }
+  .createBlogIcon {
+    // size: 1.2rem;
+    height: 1.75rem;
+  }
+}
+// End login style

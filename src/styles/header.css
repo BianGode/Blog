@@ -1,0 +1,37 @@
+header {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top: 1rem #FFFF00 solid;
+}
+header .logo {
+  max-height: 100%;
+  border-bottom: 4px #C23DE3 dashed;
+}
+header .logo:hover {
+  border-bottom: 4px #C23DE3 solid;
+}
+header .navLinks {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+header .accountButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  gap: 1rem;
+  background-color: black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 1.5rem 0 1.5rem;
+}
+header .accountButton .userIcon, header .accountButton p {
+  color: white;
+}/*# sourceMappingURL=header.css.map */

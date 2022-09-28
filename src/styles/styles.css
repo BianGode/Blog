@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Inter;
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+}
+* {
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.HeadTextLogReg {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto 0 auto;
+}
+.HeadTextLogReg h1 {
+  margin: 0;
+  font-weight: 500;
+}
+.HeadTextLogReg .underline {
+  background-color: #C23DE3;
+  height: 7.5px;
+  width: 120%;
+  border-radius: 180px;
+}
+
+.CreateBlogLink {
+  display: flex;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+}
+.CreateBlogLink li {
+  color: #C23DE3;
+}
+.CreateBlogLink .createBlogIcon {
+  height: 1.75rem;
+}/*# sourceMappingURL=styles.css.map */
