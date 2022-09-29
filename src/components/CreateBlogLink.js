@@ -1,11 +1,16 @@
 import React from 'react'
 import plus from '../plus.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlugCirclePlus, faPlusCircle } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom'
 
 export default function CreateBlogLink() {
+  const navigate = useNavigate()
+
+  function redirectCreate() {
+    navigate('/create-blog')
+  }
+
   return (
-    <div className='CreateBlogLink'>
+    <div className='CreateBlogLink' onClick={redirectCreate}>
       <img src={plus} className='createBlogIcon'/>
       <li>Create</li>
     </div>

@@ -19,6 +19,11 @@ header .navLinks {
   display: flex;
   gap: 4rem;
   align-items: center;
+  size: 1ch;
+}
+header .navLinks li:hover {
+  border-bottom: #C23DE3 4px solid;
+  transition: 0.1s linear;
 }
 header .accountButton {
   display: flex;
@@ -34,4 +39,12 @@ header .accountButton {
 }
 header .accountButton .userIcon, header .accountButton p {
   color: white;
+}
+
+.hamburger {
+  display: none;
+}
+
+.navLinksMobile {
+  display: none;
 }/*# sourceMappingURL=header.css.map */

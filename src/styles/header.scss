@@ -21,6 +21,11 @@ header {
     display: flex;
     gap: 4rem;
     align-items: center;
+    size: 1ch;
+    li:hover {
+      border-bottom: #C23DE3 4px solid;
+      transition: 0.1s linear;
+    }
   }
 
   .accountButton {
@@ -36,4 +41,13 @@ header {
       color: white;
     }
   }
+}
+
+// hide hamburger menu by default and show in mediaqueries
+.hamburger {
+	display: none;
+}
+
+.navLinksMobile {
+	display: none;
 }

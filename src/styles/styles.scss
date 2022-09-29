@@ -6,6 +6,7 @@
 * {
   box-sizing: border-box;
   font-family: Inter, sans-serif;
+	list-style: none;
 }
 
 body {
@@ -20,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto 0 auto;
+  margin: 5rem auto 0 auto;
   h1 {
     margin: 0;
     font-weight: 500;
@@ -34,8 +35,12 @@ body {
 }
 .CreateBlogLink {
   display: flex;
+  align-items: center;
   gap: 0.4rem;
   font-size: 1.2rem;
+  &:hover {
+    cursor: pointer;
+  }
   li {
     color: #C23DE3;
   }
@@ -44,4 +49,59 @@ body {
     height: 1.75rem;
   }
 }
+
+// login inputs and parents
+
+.loginInputs {
+	width: fit-content;
+	margin: 4rem auto;
+	gap: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.InputDiv {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	input {
+		height: 2rem;
+		width: 20rem;
+		color: black;
+		background-color: #f2f2f2;
+		border: 0;
+		padding: 0.7rem 0.5rem;
+		&:focus {
+			outline: none;
+		}
+		&::placeholder {
+			color: rgba(194, 61, 227, 0.7);
+		}
+	}
+}
+
+.loginButton {
+	display: block;
+	border: 0;
+	font-weight: 500;
+	font-size: 1rem;
+	margin: 0 auto;
+	padding: 0.8rem 2.7rem;
+	background-color: #ffffff;
+	border: #C23DE3 5px solid;
+	&:hover {
+		background-color: #C23DE3;
+		color: white;
+		transition: background-color 0.2s linear;
+	}
+}
 // End login style
+
+.btn {
+	background-color: rgba(194, 61, 227, 0.7);
+	color: black;
+	border-radius: 7.5px;
+	border: 0;
+	font-weight: 400;
+	padding: 0.6rem 0.9rem;
+}
