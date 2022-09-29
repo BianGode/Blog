@@ -1,4 +1,5 @@
 import Header from './components/Header';
+import Home from './components/Home'
 import './styles/styles.css';
 import './styles/mobile/headerM.css'
 import './styles/mobile/loginM.css'
@@ -6,9 +7,16 @@ import { Route, Routes } from "react-router-dom"
 import Login from './components/Login';
 import Register from './components/Register';
 
+
+
 function App() {
 	return (
 		<Routes>
+			<Route path='/' element={<>
+				<Header />
+				<Home />
+			</>
+			} />
 			<Route path='/login' element={<>
 				<Header />
 				<Login />

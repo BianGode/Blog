@@ -105,3 +105,15 @@ body {
 	font-weight: 400;
 	padding: 0.6rem 0.9rem;
 }
+
+// Signout button style 
+.signOutButton {
+	padding: 1rem 1.5rem;
+	background-color: #C23DE3;
+	&:hover {
+		background-color: #FFFF00;
+		transform: scale(1.1);
+		transition: 0.15s linear;
+
+	}
+}
