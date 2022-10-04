@@ -9,7 +9,7 @@ import Logout from './Logout'
 import { useNavigate } from 'react-router-dom'
 import { getAuth } from 'firebase/auth'
 
-export default function Header() {
+export default function Header(props) {
 	
 	const navigate = useNavigate()
 
@@ -53,7 +53,7 @@ export default function Header() {
 					<li>My Blogs</li>
 					<li>About</li>
 					<CreateBlogLink />
-					<Logout />
+					<Logout clearUser={props.setAuth}/>
 				</div>
 			</>
 		)
@@ -94,15 +94,14 @@ export default function Header() {
 	}
 
 	function HeaderCheckLogIn() {
-		if (auth.currentUser) {
-			console.log(auth.currentUser);
+		if (props.user) {
+			console.log(props.user);
 			return <HeaderLoggedIn />
 		} else {
-			console.log(auth.currentUser);
+			console.log(auth);
 			return <HeaderNotLoggedIn />
 		}
 	}
-
 	return (
 		<HeaderCheckLogIn />
 	)
