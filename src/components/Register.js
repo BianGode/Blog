@@ -24,6 +24,11 @@ export default function Register() {
 		return isValid
 	}
 
+	let navigate = useNavigate()
+	
+	function navigator() {
+		navigate('/')	
+	}
 
 	function RegisterUser() {
 		const emailI = email

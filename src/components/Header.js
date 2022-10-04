@@ -4,13 +4,20 @@ import '../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHamburger } from '@fortawesome/free-solid-svg-icons'
 import CreateBlogLink from './CreateBlogLink'
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
 import Logout from './Logout'
+import { useNavigate } from 'react-router-dom'
+import { getAuth } from 'firebase/auth'
 
 export default function Header() {
+	
+	const navigate = useNavigate()
 
-	console.log(auth.currentUser);
+  function redirectCreate(target) {
+		console.log(target);
+    navigate(target)
+  }
+
 	function showNav() {
 		let hamburger = document.querySelector('.navLinksMobile').classList
 		if (!hamburger.contains('clicked')) {
@@ -19,11 +26,12 @@ export default function Header() {
 			hamburger.remove('clicked')
 		}
 	}
-	if (auth.currentUser) {
+
+	function HeaderLoggedIn() {
 		return (
 			<>
 				<header>
-					<img src={logo} className="logo" alt='Logo' />
+					<img src={logo} className="logo" alt='Logo'/>
 
 					<div className='navLinks'>
 						<li>Explore</li>
@@ -49,7 +57,9 @@ export default function Header() {
 				</div>
 			</>
 		)
-	} else {
+	}
+
+	function HeaderNotLoggedIn() {
 		return (
 			<>
 				<header>
@@ -59,12 +69,11 @@ export default function Header() {
 						<li>Explore</li>
 						<li>My Blogs</li>
 						<li>About</li>
-						<CreateBlogLink />
 					</div>
 
-					<div className='accountButton'>
-						<FontAwesomeIcon inverse icon={faUser} className="userIcon" />
-						<p>Profile</p>
+					<div className='navButtonsMobile'>
+					<button className='btn' onClick={() => redirectCreate('/login')}>Login</button>
+						<button className='btn' onClick={() => redirectCreate('/register')}>Register</button>
 					</div>
 
 					<FontAwesomeIcon icon={faHamburger} className='hamburger' onClick={showNav} />
@@ -74,13 +83,27 @@ export default function Header() {
 					<li>Explore</li>
 					<li>My Blogs</li>
 					<li>About</li>
-					<CreateBlogLink />
 					<div className='navButtonsMobile'>
-						<button className='btn'>Login</button>
-						<button className='btn'>Register</button>
+						<button className='btn' onClick={() => redirectCreate('/login')}>Login</button>
+						<button className='btn' onClick={() => redirectCreate('/register')}>Register</button>
 					</div>
 				</div>
 			</>
 		)
+
 	}
+
+	function HeaderCheckLogIn() {
+		if (auth.currentUser) {
+			console.log(auth.currentUser);
+			return <HeaderLoggedIn />
+		} else {
+			console.log(auth.currentUser);
+			return <HeaderNotLoggedIn />
+		}
+	}
+
+	return (
+		<HeaderCheckLogIn />
+	)
 }
