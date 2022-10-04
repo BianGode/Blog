@@ -9,6 +9,7 @@ import Register from './components/Register';
 import { useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
+import CreateBlog from './components/CreateBlog';
 
 function App() {
 
@@ -21,20 +22,25 @@ function App() {
 	return (
 		<Routes>
 			<Route path='/' element={<>
-				<Header user={authentication} setAuth={setAuthentication}/>
+				<Header user={authentication} setAuth={setAuthentication} />
 				<Home />
 			</>
 			} />
 			<Route path='/login' element={<>
-				<Header user={authentication} setAuth={setAuthentication}/>
+				<Header user={authentication} setAuth={setAuthentication} />
 				<Login />
 			</>
 			} />
 			<Route path='/register' element={<>
-				<Header user={authentication} setAuth={setAuthentication}/>
+				<Header user={authentication} setAuth={setAuthentication} />
 				<Register />
-			</>}
-			/>
+			</>
+			} />
+			<Route path='/create-blog' element={<>
+				<Header user={authentication} setAuth={setAuthentication} />
+				<CreateBlog />
+			</>
+			} />
 		</Routes>
 	);
 }

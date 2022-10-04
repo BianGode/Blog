@@ -13,6 +13,7 @@ header .logo {
 }
 header .logo:hover {
   border-bottom: 4px #C23DE3 solid;
+  transition: border-bottom 10s linear;
 }
 header .navLinks {
   list-style: none;

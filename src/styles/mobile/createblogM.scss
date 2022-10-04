@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+	.create-container {
+		width: 100%;
+
+		.setBlogStyleDiv {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2.5rem;
+			width: 100%;
+		}
+	}
+}
