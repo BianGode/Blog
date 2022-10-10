@@ -31,7 +31,7 @@ export default function Header(props) {
 		return (
 			<>
 				<header>
-					<img src={logo} className="logo" alt='Logo'/>
+					<img src={logo} onClick={useNavigate('/')} className="logo" alt='Logo'/>
 
 					<div className='navLinks'>
 						<li>Explore</li>
@@ -105,4 +105,5 @@ export default function Header(props) {
 	return (
 		<HeaderCheckLogIn />
 	)
+	
 }
