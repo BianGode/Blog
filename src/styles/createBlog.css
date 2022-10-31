@@ -50,7 +50,7 @@
   border: 5px dashed black;
   background-position: center;
   background-size: contain;
-  background-repeat: none;
+  background-repeat: no-repeat;
 }
 .create-container .setBlogStyleDiv .setHeaderImageDiv .selectImage {
   display: flex;
@@ -122,7 +122,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .fontColor {
@@ -136,4 +136,10 @@
 
 .publish {
   background-color: black;
+  margin: 2rem;
+  width: 10rem !important;
+  color: #C23DE3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=createBlog.css.map */

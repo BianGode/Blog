@@ -1,0 +1,21 @@
+@media screen and (max-width: 900px) {
+	.explore {
+		width: 90%;
+	}
+	.searchFilterDiv {
+		padding: 2rem 3rem;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.explore {
+		width: 90%;
+		.searchFilterDiv {
+			padding: 2rem 3rem;
+			width: 100%;
+		}
+
+	}
+
+}

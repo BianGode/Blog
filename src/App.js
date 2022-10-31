@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase';
 import CreateBlog from './components/CreateBlog';
+import Explore from './components/Explore';
 
 function App() {
 
@@ -39,6 +40,11 @@ function App() {
 			<Route path='/create-blog' element={<>
 				<Header user={authentication} setAuth={setAuthentication} />
 				<CreateBlog />
+			</>
+			} />
+			<Route path='/explore' element={<>
+				<Header user={authentication} setAuth={setAuthentication} />
+				<Explore />
 			</>
 			} />
 		</Routes>

@@ -31,10 +31,10 @@ export default function Header(props) {
 		return (
 			<>
 				<header>
-					<img src={logo} onClick={useNavigate('/')} className="logo" alt='Logo'/>
+					<img src={logo} onClick={() => redirectCreate('/')} className="logo" alt='Logo'/>
 
 					<div className='navLinks'>
-						<li>Explore</li>
+						<li onClick={() => redirectCreate('/explore')}>Explore</li>
 						<li>My Blogs</li>
 						<li>About</li>
 						<CreateBlogLink />
@@ -49,7 +49,7 @@ export default function Header(props) {
 				</header>
 
 				<div className='navLinksMobile'>
-					<li>Explore</li>
+					<li onClick={() => redirectCreate('/explore')}>Explore</li>
 					<li>My Blogs</li>
 					<li>About</li>
 					<CreateBlogLink />
@@ -95,10 +95,10 @@ export default function Header(props) {
 
 	function HeaderCheckLogIn() {
 		if (props.user) {
-			console.log(props.user);
+			// console.log(props.user);
 			return <HeaderLoggedIn />
 		} else {
-			console.log(auth);
+			// console.log(auth);
 			return <HeaderNotLoggedIn />
 		}
 	}

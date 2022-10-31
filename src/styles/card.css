@@ -13,8 +13,8 @@
   height: 40%;
   border-bottom: 3px solid purple;
   background-position: center;
-  background-size: contain;
-  background-repeat: none;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .card .cardHead .textBackground {
   display: flex;
