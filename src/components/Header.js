@@ -4,7 +4,6 @@ import '../styles/header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser, faHamburger } from '@fortawesome/free-solid-svg-icons'
 import CreateBlogLink from './CreateBlogLink'
-import { auth } from '../firebase';
 import Logout from './Logout'
 import { useNavigate } from 'react-router-dom'
 import { getAuth } from 'firebase/auth'
@@ -35,7 +34,7 @@ export default function Header(props) {
 
 					<div className='navLinks'>
 						<li onClick={() => redirectCreate('/explore')}>Explore</li>
-						<li>My Blogs</li>
+						<li onClick={() => redirectCreate('/myblogs')}>My Blogs</li>
 						<li>About</li>
 						<CreateBlogLink />
 					</div>
@@ -50,7 +49,7 @@ export default function Header(props) {
 
 				<div className='navLinksMobile'>
 					<li onClick={() => redirectCreate('/explore')}>Explore</li>
-					<li>My Blogs</li>
+					<li onClick={() => redirectCreate('/myblogs')}>My Blogs</li>
 					<li>About</li>
 					<CreateBlogLink />
 					<Logout clearUser={props.setAuth}/>
@@ -65,7 +64,7 @@ export default function Header(props) {
 				<header>
 					<img src={logo} className="logo" alt='Logo' />
 
-					<div className='navLinks'>
+					<div className='navLinks' onClick={() => alert('Login first to see someone elses thoughts')}>
 						<li>Explore</li>
 						<li>My Blogs</li>
 						<li>About</li>

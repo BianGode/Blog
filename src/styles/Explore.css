@@ -22,4 +22,13 @@
 }
 .explore .searchFilterDiv .searchDiv .filter {
   margin: 0 0 0 3rem;
+}
+
+.loadThought {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
 }/*# sourceMappingURL=Explore.css.map */

@@ -4,13 +4,15 @@ import '../styles/mobile/createblogM.css'
 import SelectColors from './SelectColors'
 import Card from './Card'
 import SelectImage from './SelectImage'
+import ExampleCard from './ExampleCard'
 import Publish from './Publish'
 import { getStorage, ref, uploadBytes } from 'firebase/storage'
-import { doc, setDoc } from "firebase/firestore"; 
+import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from '../firebase';
 
 
 export default function CreateBlog() {
+	console.log('rerender');
 	const [title, setTitle] = useState('')
 	const [image, setImage] = useState('')
 	const [color, setColor] = useState('')
@@ -38,18 +40,22 @@ export default function CreateBlog() {
 	async function saveToStorage(res) {
 		const imgRef = ref(storage, res.name);
 
+		if(res) {
+			uploadBytes(imgRef, res).then((snapshot) => {
+				console.log('uploaded image');
+			})
+		}
 
-		uploadBytes(imgRef, res).then((snapshot) => {
-			console.log('uploaded image');
-		})
+
 
 		//save to firestore 
 		await setDoc(doc(db, 'blogs', title), {
-			Title: title,
+			title: title,
 			color: color,
 			fontColor: fontColor,
 			image: imgRef._location.path,
 			thought: thought,
+			user: auth.currentUser.email
 		}).then(() => {
 			console.log('succes');
 		})
@@ -82,9 +88,9 @@ export default function CreateBlog() {
 			</div>
 			<div className='previewDiv'>
 				<p>Preview</p>
-				<Card title={title} thought={thought} fontColor={fontColor} image={image} color={color} />
+				<ExampleCard title={title} thought={thought} fontColor={fontColor} image={image} color={color} />
 			</div>
-			<div className='publish' onClick={() => {saveToStorage(image)}}><h3>Publish</h3></div>
+			<div className='publish' onClick={() => { saveToStorage(image) }}><h3>Publish</h3></div>
 		</div>
 	)
 }

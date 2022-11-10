@@ -6,6 +6,9 @@
 		padding: 2rem 3rem;
 		width: 100%;
 	}
+	.card {
+		width: 80% !important;
+	}
 }
 
 @media screen and (max-width: 1080px) {
@@ -15,7 +18,5 @@
 			padding: 2rem 3rem;
 			width: 100%;
 		}
-
 	}
-
 }
