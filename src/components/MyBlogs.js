@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { faFilter } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { auth, db } from '../firebase'
-import '../styles/Explore.css'
-import '../styles/mobile/exploreM.css'
+import '../styles/myblogs.css'
 import Card from './Card';
 import { collection, query, getDocs, where } from "firebase/firestore";
 
@@ -68,15 +67,16 @@ export default function MyBlogs() {
 	}
 
 	return (
-		<div className='loadThought'>
+		<div className='loadThoughtB'>
 			<div className='searchFilterDiv'>
 				<div className='searchDiv'>
 					<input onChange={handleChange} type='text' />
 					<button onClick={LoadThoughtsFun}>Search</button>
-					<FontAwesomeIcon icon={faFilter} className='filter' />
 				</div>
 			</div>
+			<div className='myblogs'>
 			{thoughtState}
+			</div>
 		</div>
 	)
 }

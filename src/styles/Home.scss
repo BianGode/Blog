@@ -1,0 +1,51 @@
+.Home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	margin: 0 auto;
+	.HomeHeader {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h2 {
+			font-weight: 300;
+			span {
+				color: #C23DE3
+			}
+		}
+		.HomeHeaderHead {
+			display: flex;
+			justify-content: center;
+			gap: 1rem;
+			.vline {
+				height: auto;
+				width: 0.4rem;
+				background-color: black;
+				border-radius: 90px;
+			}
+			.headerText {
+				max-width: 30%;
+				background-color: beige;
+				border-radius: 20px;
+				padding: 1rem;
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+	hr {
+		width: 69%;
+		border: 3px solid;
+		border-radius: 90px;
+		color: #C23DE3;
+		margin-top: 2rem;
+	}
+}
+
+.Banner {
+	width: 69%;
+	max-height: 175px;
+}

@@ -4,36 +4,47 @@
 	flex-direction: column;
 	justify-content: center;
 	margin: 4rem auto 2rem auto;
-		.searchFilterDiv {
-			width: 40%;
-			background-color: #D9D9D9;
-			padding: 2rem 5rem;
-			display: flex;
-			justify-content: center;
-			
-			.searchDiv {
-				display: flex;
-				// width: ;
-				gap: 0.2rem;
-
-				button {
-					border: 0;
-					font-weight: 300;
-				}
-
-				.filter {
-					margin: 0 0 0 3rem;
-				}
-			}
-			
-		}
 }
 
-.loadThought {
+.loadThoughts {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	gap: 1rem;
-	margin-top: 3rem;
+	margin-top: 2rem;
+
+	.loadThought {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+		width: 100%;
+		margin: 0;
+		max-width: 60%;
+	}
+}
+
+.searchFilterDiv {
+	width: 40%;
+	background-color: #D9D9D9;
+	padding: 2rem 5rem;
+	display: flex;
+	justify-content: center;
+	border-radius: 5px;
+	.searchDiv {
+		display: flex;
+		// width: ;
+		gap: 1rem;
+
+		button {
+			border: 0;
+			font-weight: 300;
+		}
+
+		.filter {
+			margin: 0 0 0 3rem;
+		}
+	}
+
 }

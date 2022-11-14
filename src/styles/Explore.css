@@ -5,30 +5,41 @@
   justify-content: center;
   margin: 4rem auto 2rem auto;
 }
-.explore .searchFilterDiv {
+
+.loadThoughts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.loadThoughts .loadThought {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  margin: 0;
+  max-width: 60%;
+}
+
+.searchFilterDiv {
   width: 40%;
   background-color: #D9D9D9;
   padding: 2rem 5rem;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
 }
-.explore .searchFilterDiv .searchDiv {
+.searchFilterDiv .searchDiv {
   display: flex;
-  gap: 0.2rem;
+  gap: 1rem;
 }
-.explore .searchFilterDiv .searchDiv button {
+.searchFilterDiv .searchDiv button {
   border: 0;
   font-weight: 300;
 }
-.explore .searchFilterDiv .searchDiv .filter {
+.searchFilterDiv .searchDiv .filter {
   margin: 0 0 0 3rem;
-}
-
-.loadThought {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 3rem;
 }/*# sourceMappingURL=Explore.css.map */

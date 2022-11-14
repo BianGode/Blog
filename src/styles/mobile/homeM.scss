@@ -1,0 +1,31 @@
+@media screen and (max-width: 730px) {
+	.Home {
+		.HomeHeader {
+			.HomeHeaderHead {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+
+				.vline {
+					display: none;
+				}
+
+				.headerText {
+					max-width: none !important;
+					margin: 1rem;
+				}
+
+				.HeaderImageText {
+					margin: 0 auto;
+				}
+			}
+		}
+		.Banner, hr {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 900px){
+	
+}

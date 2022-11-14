@@ -35,13 +35,14 @@ export default function Header(props) {
 					<div className='navLinks'>
 						<li onClick={() => redirectCreate('/explore')}>Explore</li>
 						<li onClick={() => redirectCreate('/myblogs')}>My Blogs</li>
-						<li>About</li>
+						<li onClick={() => redirectCreate('/about')}>About</li>
 						<CreateBlogLink />
 					</div>
 
 					<div className='accountButton'>
 						<FontAwesomeIcon inverse icon={faUser} className="userIcon" />
 						<p>Profile</p>
+						<Logout clearUser={props.setAuth}/>
 					</div>
 
 					<FontAwesomeIcon icon={faHamburger} className='hamburger' onClick={showNav} />
@@ -50,7 +51,7 @@ export default function Header(props) {
 				<div className='navLinksMobile'>
 					<li onClick={() => redirectCreate('/explore')}>Explore</li>
 					<li onClick={() => redirectCreate('/myblogs')}>My Blogs</li>
-					<li>About</li>
+					<li onClick={() => redirectCreate('/about')}>About</li>
 					<CreateBlogLink />
 					<Logout clearUser={props.setAuth}/>
 				</div>
@@ -62,12 +63,12 @@ export default function Header(props) {
 		return (
 			<>
 				<header>
-					<img src={logo} className="logo" alt='Logo' />
+					<img src={logo} className="logo" onClick={() => redirectCreate('/')} alt='Logo' />
 
 					<div className='navLinks' onClick={() => alert('Login first to see someone elses thoughts')}>
 						<li>Explore</li>
 						<li>My Blogs</li>
-						<li>About</li>
+						<li onClick={() => redirectCreate('/about')}>About</li>
 					</div>
 
 					<div className='navButtonsMobile'>
@@ -81,7 +82,7 @@ export default function Header(props) {
 				<div className='navLinksMobile'>
 					<li>Explore</li>
 					<li>My Blogs</li>
-					<li>About</li>
+					<li onClick={() => redirectCreate('/about')}>About</li>
 					<div className='navButtonsMobile'>
 						<button className='btn' onClick={() => redirectCreate('/login')}>Login</button>
 						<button className='btn' onClick={() => redirectCreate('/register')}>Register</button>

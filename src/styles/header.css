@@ -36,7 +36,7 @@ header .accountButton {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 0 1.5rem 0 1.5rem;
+  padding-left: 1rem;
 }
 header .accountButton .userIcon, header .accountButton p {
   color: white;

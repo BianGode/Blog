@@ -74,7 +74,6 @@ export default function Explore() {
 				<div className='searchDiv'>
 					<input onChange={handleChange} type='text' />
 					<button onClick={LoadThoughtsFun}>Search</button>
-					<FontAwesomeIcon icon={faFilter} className='filter' />
 				</div>
 			</div>
 			<div className='loadThoughts'>
