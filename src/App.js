@@ -64,7 +64,7 @@ function App() {
 
 	return (
 		<Routes>
-			<Route path='/' element={<>
+			<Route path='/blog' element={<>
 				<Header user={authentication} setAuth={setAuthentication} />
 				<Home />
 			</>
