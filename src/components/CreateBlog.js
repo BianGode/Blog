@@ -65,7 +65,7 @@ export default function CreateBlog() {
 			thought: thought,
 			user: auth.currentUser.email
 		}).then(() => {
-			console.log('succes');
+			console.log('succes Test');
 			redirectCreate('/explore')
 		})
 	}
