@@ -36,8 +36,15 @@ export default function CreateBlog() {
 		}
 	}
 
-	const storage = getStorage()
+	const navigate = useNavigate()
 
+  function redirectCreate(target) {
+		console.log(target);
+    navigate(target)
+  }
+
+	const storage = getStorage()
+	
 	async function saveToStorage(res) {
 		const imgRef = ref(storage, res.name);
 
@@ -59,7 +66,7 @@ export default function CreateBlog() {
 			user: auth.currentUser.email
 		}).then(() => {
 			console.log('succes');
-			useNavigate('/explore')
+			redirectCreate('/explore')
 		})
 	}
 
