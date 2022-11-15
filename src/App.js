@@ -20,12 +20,10 @@ function App() {
 	const [authentication, setAuthentication] = useState(null)
 	const navigate = useNavigate()
 	// const locate = useLocation()
-
 	
 	const PathCheck = () => {
 		let locate = useLocation().pathname
-		console.log();
-		if(useLocation().pathname == `/about`) {
+		if(useLocation().pathname === '/about') {
 			console.log('locate = ' + locate);
 		} 
 		// if (locate !== '/' && locate !== '/about') {
@@ -52,7 +50,6 @@ function App() {
 			if (user) {
 				setAuthentication(user)
 			} else {
-				<PathCheck/>
 			}
 		})
 	}, [])
@@ -64,7 +61,7 @@ function App() {
 
 	return (
 		<Routes>
-			<Route path='/blog' element={<>
+			<Route path='/' element={<>
 				<Header user={authentication} setAuth={setAuthentication} />
 				<Home />
 			</>
@@ -101,6 +98,7 @@ function App() {
 				<>
 					<Header user={authentication} setAuth={setAuthentication} />
 					<About />
+					<PathCheck/>
 				</>
 			} />
 		</Routes>

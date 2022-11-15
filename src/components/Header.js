@@ -65,9 +65,9 @@ export default function Header(props) {
 				<header>
 					<img src={logo} className="logo" onClick={() => redirectCreate('/')} alt='Logo' />
 
-					<div className='navLinks' onClick={() => alert('Login first to see someone elses thoughts')}>
-						<li>Explore</li>
-						<li>My Blogs</li>
+					<div className='navLinks'>
+						<li onClick={() => alert('Login first to see someone elses thoughts')}>Explore</li>
+						<li onClick={() => alert('Login first to see someone elses thoughts')}>My Blogs</li>
 						<li onClick={() => redirectCreate('/about')}>About</li>
 					</div>
 
