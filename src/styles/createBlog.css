@@ -135,11 +135,19 @@
 }
 
 .publish {
-  background-color: black;
+  border: black 4px solid;
   margin: 2rem;
   width: 10rem !important;
   color: #C23DE3;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.1s ease;
+}
+.publish:hover {
+  background-color: #C23DE3;
+  color: white;
+  border: none;
+  transition: 0.1s ease;
+  transform: scale(1.1);
 }/*# sourceMappingURL=createBlog.css.map */
