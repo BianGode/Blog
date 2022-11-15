@@ -54,8 +54,6 @@ export default function CreateBlog() {
 			})
 		}
 
-
-
 		//save to firestore 
 		await setDoc(doc(db, 'blogs', title), {
 			title: title,
@@ -99,7 +97,7 @@ export default function CreateBlog() {
 				<p>Preview</p>
 				<ExampleCard title={title} thought={thought} fontColor={fontColor} image={image} color={color} />
 			</div>
-			<div className='publish' onClick={() => { saveToStorage(image) }}><h3>Publish</h3></div>
+			<div className='publish' onClick={() => {saveToStorage(image)}}><h3>Publish</h3></div>
 		</div>
 	)
 }

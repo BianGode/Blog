@@ -11,6 +11,9 @@
 			border-radius: 5px;
 		}
 	}
+	.myblogs {
+		width: 95% !important;
+	}
 }
 @media screen and (max-width: 900px){
 	.searchDiv {
@@ -37,6 +40,7 @@
 		flex-wrap: wrap;
 		gap: 1rem;
 		justify-content: space-evenly;
+		width: 70%;
 	}
 }
 

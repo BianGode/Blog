@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { faFilter } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { auth, db } from '../firebase'
 import '../styles/Explore.css'
 import '../styles/mobile/exploreM.css'
-import LoadThoughts from './LoadThoughts'
 import Card from './Card';
 import { collection, query, getDocs, where } from "firebase/firestore";
 
