@@ -9,6 +9,7 @@ import Publish from './Publish'
 import { getStorage, ref, uploadBytes } from 'firebase/storage'
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from '../firebase';
+import { useNavigate } from 'react-router-dom'
 
 
 export default function CreateBlog() {
@@ -58,6 +59,7 @@ export default function CreateBlog() {
 			user: auth.currentUser.email
 		}).then(() => {
 			console.log('succes');
+			useNavigate('/explore')
 		})
 	}
 
